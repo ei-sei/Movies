@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function SearchForm( {onSubmit}) {
+export default function SearchForm({ onSubmit }) {
     const [inputValue, setInputValue] = useState("");
 
     function handleInput(e) {
@@ -15,9 +15,11 @@ export default function SearchForm( {onSubmit}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input value={inputValue} type='text' required onChange={handleInput} />
-            <input type='submit' value='search' />
-        </form>
+        <div>
+            <form onSubmit={handleSubmit}>
+                <input value={inputValue} type='text' required onChange={handleInput} />
+                <input type='submit' value='search' />
+            </form>
+        </div>
     )
 }
